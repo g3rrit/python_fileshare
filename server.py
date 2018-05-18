@@ -25,6 +25,7 @@ server.bind(add[4]);
 """
 
 server = socket.socket(socket.AF_INET6, socket.SOCK_STREAM);
+server.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 1);
 
 server.bind(("::1", 5000));
 
